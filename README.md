@@ -1,3 +1,3 @@
 # TheBeauty
 
-Projet de TheBeauty realiser par Iliass, Kawtar, Simo, Hind et Aya
+Projet de TheBeauty realisé par Iliass, Kawtar, Simo, Hind et Aya

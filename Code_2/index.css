@@ -1,0 +1,82 @@
+/* Général */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Fond */
+.background {
+    background-image: url('./images/backgound_1.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Section du logo */
+.logo-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-section img {
+    width: 150px; /* Ajuste la taille selon tes besoins */
+    border-radius: 50%;
+    border: 3px solid pink;
+}
+
+/* Section du contenu */
+.content {
+    flex: 2;
+    text-align: center;
+    color: white;
+}
+
+/* Titre et sous-titre */
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: pink;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8); /* Blanc avec une transparence pour plus de clarté */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ajout d'une ombre pour le contraste */
+    margin-bottom: 30px;
+}
+
+/* Boutons */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.button {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, pink, white);
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}

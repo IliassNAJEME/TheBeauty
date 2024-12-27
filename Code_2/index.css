@@ -1,0 +1,34 @@
+/* Section de chargement */
+#loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Couleur blanche */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid pink;
+    margin-bottom: 20px;
+}
+
+#loading-text {
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    color: pink;
+}
+
+/* Le reste des styles reste inchangé */

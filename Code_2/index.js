@@ -14,8 +14,17 @@ function startLoading() {
             progress++;
             loadingText.textContent = `Chargement... ${progress}%`;
         }
-    }, 30); // Ajustez cette valeur pour ralentir ou accélérer le chargement
+    }, 30);
 }
+
+// Gestion des erreurs
+window.addEventListener('error', function(e) {
+    const loadingContainer = document.getElementById('loading-container');
+    const mainContent = document.getElementById('main-content');
+    
+    loadingContainer.style.display = 'none';
+    mainContent.style.display = 'flex';
+});
 
 // Démarrer le chargement lorsque la page est prête
 document.addEventListener('DOMContentLoaded', startLoading);

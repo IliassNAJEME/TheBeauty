@@ -292,3 +292,95 @@ body, html {
 .promotion-badge {
     animation: pulse 2s infinite;
 }
+
+/* Style pour la section des gifts */
+.gifts {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    text-align: center;
+}
+
+.gifts h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.gradient-text {
+    color: white; /* Texte blanc */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre pour améliorer la lisibilité */
+}
+
+.gifts .product {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gifts .product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.gifts .product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.gifts .product:hover img {
+    transform: scale(1.1);
+}
+
+.gifts .price {
+    font-size: 1.2rem;
+    color: #ff69b4;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.gifts .button {
+    background: linear-gradient(45deg, #ff6f61, #ffcccb);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.gifts .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gifts .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #ff6f61;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.gifts .arrow:hover {
+    transform: translateX(10px);
+    color: #ffcccb;
+}

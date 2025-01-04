@@ -41,7 +41,7 @@ body, html {
 
 /* Fond */
 .background {
-    background-image: url('./images/backgound_1.jpeg');
+    background-image: url('../images/backgound_1.jpeg');
     background-size: cover;
     background-position: center;
     height: 100%;

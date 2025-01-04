@@ -96,3 +96,84 @@ main {
     color: black;
     border: 1pxsolidblack;
 }
+/* Footer */
+footer {
+    background-color: rgba(238, 231, 231, 0.9);
+    padding: 20px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #000;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #ea29a9;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+    color: #9d1a55; /* Changement de couleur au survol */
+}
+
+footer p {
+    margin-bottom: 22px;
+    font-size: 13px;
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre l'icône et le texte */
+}
+
+.footer-section a i {
+    font-size: 20px; /* Taille des icônes */
+    color: #ba0c8c; /* Couleur des icônes */
+}
+
+.footer-section a:hover i {
+    color: #0b0c0c; /* Changement de couleur des icônes au survol */
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}

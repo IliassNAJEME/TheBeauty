@@ -5,8 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Beauty</title>
     <link rel="stylesheet" href="../css/index.css">
+    <!-- Ajout de Font Awesome pour l'icône du panier -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header avec recherche et panier -->
+    <header class="main-header">
+        <div class="header-top">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <img src="../images/logo.jpeg" alt="Logo The Beauty">
+                </div>
+                
+                <!-- Barre de recherche -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un produit...">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <!-- Panier -->
+                <div class="shopping-cart">
+                    <button class="cart-button">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <!-- Dropdown du panier -->
+                    <div class="cart-dropdown">
+                        <div class="cart-items">
+                            <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+                            <div class="empty-cart">Votre panier est vide</div>
+                        </div>
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span>0.00 €</span>
+                        </div>
+                        <button class="checkout-button">Voir le panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="nouveaux_produits.html" class="nav-link">Nouveau Produits</a></li>
+                <li><a href="promotion.html" class="nav-link">Promotion</a></li>
+                <li><a href="gifts.html" class="nav-link">Gifts</a></li>
+                <li><a href="collection.html" class="nav-link">Collection</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Le reste de votre code HTML reste identique -->
+
     <!-- Section de chargement -->
     <div id="loading-container">
         <div class="loading-content">
@@ -15,26 +70,26 @@
         </div>
     </div>
 
-    <!-- Contenu principal -->
-    <div class="background" id="main-content" style="display: none;">
-        <!-- Section gauche avec le logo -->
-        <div class="logo-section">
-            <img src="../images/logo.jpeg" alt="Logo The Beauty">
-        </div>
-        <!-- Section droite avec le contenu -->
-        <div class="content">
-            <!-- Titre et sous-titre -->
-            <h1 class="title">The Beauty</h1>
-            <p class="subtitle">Quality has no price, but it has its place.</p>
-            <!-- Boutons -->
-            <div class="buttons-container">
-                <a href="nouveaux_produits.html" class="button">Nouveau Produits</a>
-                <a href="promotion.html" class="button">Promotion</a>
-                <a href="gifts.html" class="button">Gifts</a>
-                <a href="collection.html" class="button">Collection</a>
+    <div class="carrousel-section">
+        <button class="carrousel-nav prev">&#10094;</button>
+        <div class="carrousel-container">
+            <div class="carrousel-slide">
+                <img src="../images/interface_1.jpg" alt="Promotion 1">
+            </div>
+            <div class="carrousel-slide">
+                <img src="../images/interface_2.jpg" alt="Promotion 2">
+            </div>
+            <div class="carrousel-slide">
+                <img src="../images/interface_3.jpg" alt="Promotion 3">
+            </div>
+            <div class="carrousel-slide">
+                <img src="../images/interface_4.jpg" alt="Promotion 4">
             </div>
         </div>
+        <button class="carrousel-nav next">&#10095;</button>
     </div>
+
+    
 
     <!-- Nouvelle section pour les nouveaux produits -->
     <div class="nouveaux-produits">
@@ -320,4 +375,5 @@
 
     <script src="../js/index.js"></script>
 </body>
+
 </html>

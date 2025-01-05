@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Beauty - Cadeaux</title>
+    <link rel="stylesheet" href="./InterfaceCadeau.css">
+</head>
+<body>
+    <header>
+        <header>
+            <div class="header-content">
+            <h1>The Beauty</h1>
+            <nav>
+                <ul>
+                    <li><a href="#gamme">Notre Gamme</a></li>
+                    <li><a href="#contact">Contactez-nous</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <img src="./assets/panier.png" alt="Panier" title="Votre Panier">
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+        </header>
+    
+        <div class = "Background-image">
+            <img src = "./assets/back.jpg" alt = "">
+        </div>
+
+        <main>
+            <section id="gamme">
+                <h2>Découvrez notre gamme</h2>
+                <p>The Beauty "Une sélection unique de soins pour sublimer votre peau"</p>
+            </section>
+    
+            <section id="cadeaux">
+                <h2>Pack Cadeaux</h2>
+                <div class="pack">
+                    <div class="pack-image">
+                        <img src="./assets/Cadeau2.webp" alt="Cadeau - Gamme de soins visage" id="image-cadeau">
+                    </div>
+    
+                    <div class="pack-choices">
+                        <h3>Choisissez votre pack</h3>
+                        <label for="taille">Taille :</label>
+                        <select id="taille">
+                            <option value="petit">Petit</option>
+                            <option value="moyen">Moyen</option>
+                            <option value="grand">Grand</option>
+                        </select>
+    
+                        <label>Couleur :</label>
+    <div class="color-buttons">
+        <button class="color-btn" data-color="rose" style="background-color: pink;"></button>
+        <button class="color-btn" data-color="rouge" style="background-color: red;"></button>
+        <button class="color-btn" data-color="noir" style="background-color: black;"></button>
+        <button class="color-btn" data-color="bleu" style="background-color: blue;"></button>
+    </div>
+    
+                        <button id="AjouterauPanier">Ajouter au Panier</button>
+                        <section id="demande-personnalisee">
+                            <button id="btn-plus" aria-label="Ajouter une demande personnalisée">+</button>
+                            <div id="demande-champ" class="demande-champ-cache">
+                                <label for="demande">Votre demande personnalisée :</label>
+                                <input type="text" id="demande" placeholder="Entrez votre demande...">
+                                <button id="submit-demande">Envoyer</button>
+                            </div>
+                        </section>
+                        <div id="aperçu" class="animation"></div>
+                    </div>
+                </div>
+            </section>
+            
+    
+            <section id="contact">
+                <h2>Contactez-nous</h2>
+                <p>Pour toute information, contactez-nous à : <a href="mailto:Thebeauty@gmail.com">Thebeauty@gmail.com</a></p>
+            </section>
+            
+            <footer>
+                <p>&copy; 2025 The Beauty. Tous droits réservés.</p>
+            </footer>
+    
+        <script src="./InterfaceCadeau.js"></script>
+    </body>
+    </html>
+    

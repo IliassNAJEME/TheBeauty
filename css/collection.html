@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection</title>
+    <link rel="stylesheet" href="../css/collection.css">
+</head>
+<body>
+    <!-- En-tête avec logo, barre de recherche, et panier -->
+    <header class="main-header">
+        <div class="header-top">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <img src="../images/logo.jpeg" alt="Logo The Beauty">
+                </div>
+                
+                <!-- Barre de recherche -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un produit...">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <!-- Panier -->
+                <div class="shopping-cart">
+                    <button class="cart-button">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <!-- Dropdown du panier -->
+                    <div class="cart-dropdown">
+                        <div class="cart-items">
+                            <div class="empty-cart">Votre panier est vide</div>
+                        </div>
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span>0.00 €</span>
+                        </div>
+                        <button class="checkout-button">Voir le panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="nouveaux_produits.html" class="nav-link">Nouveaux Produits</a></li>
+                <li><a href="promotion.html" class="nav-link">Promotions</a></li>
+                <li><a href="gifts.html" class="nav-link">Cadeaux</a></li>
+                <li><a href="collection.html" class="nav-link active">Collection</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section de la collection -->
+    <main>
+        <h1>Découvrez Notre Collection</h1>
+        <p class="collection-description">
+            Explorez notre sélection exclusive de produits de beauté soigneusement choisis pour sublimer votre routine quotidienne. 
+            Que vous cherchiez des soins hydratants, des produits de maquillage ou des parfums envoûtants, notre collection a tout pour vous plaire.
+        </p>
+        <div class="product-list">
+            <!-- Exemple de produit -->
+            <div class="product">
+                <img src="../images/Skincare_routine.jpg" alt="Produit 1">
+                <p>Collection Printemps</p>
+                <h1>129.99€</h1>
+                <button onclick="addToCart('Fond de Teint Éclat Naturel', 14.99)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="../images/IMG_0795.jpeg" alt="Produit 2">
+                <p>Collection Été</p>
+                <h1>149.99€</h1>
+                <button onclick="addToCart('Palette Fards à Paupières Intenses', 18.58)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="../images/simo.jpg" alt="Produit 3">
+                <p>Collection Automne</p>
+                <h1>139.99€</h1>
+                <button onclick="addToCart('Coffret Hydratation Profonde', 33.17)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="../images/collection_4.jpeg" alt="Produit 4">
+                <p>Collection Hiver</p>
+                <h1>159.99€</h1>
+                <button onclick="addToCart('Parfum Raspberry Élégance', 90.30)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="../images/images.jpeg" alt="Produit 5">
+                <p>Parfum Blueberry Musk</p>
+                <h1>90,30€</h1>
+                <button onclick="addToCart('Parfum Blueberry Musk', 90.30)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="../images/hatim.jpg" alt="Produit 6">
+                <p>Sérum Hydratant Anti-Âge</p>
+                <h1>43,20€</h1>
+                <button onclick="addToCart('Sérum Hydratant Anti-Âge', 43.20)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="../images/said.jpeg" alt="Produit 7">
+                <p>Collection Soin Capillaire à l'Huile de Ricin</p>
+                <h1>77,20€</h1>
+                <button onclick="addToCart('Collection Soin Capillaire à l\'Huile de Ricin', 77.20)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="../images/hamza.jpeg" alt="Produit 8">
+                <p>Baume à Lèvres Cerise Brillante</p>
+                <h1>9,55€</h1>
+                <button onclick="addToCart('Baume à Lèvres Cerise Brillante', 9.55)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="../images/3ans.jpg" alt="Produit 9">
+                <p>Blush Crème Multi-Usage</p>
+                <h1>80,28€</h1>
+                <button onclick="addToCart('Blush Crème Multi-Usage', 80.28)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="../images/labo.jpeg" alt="Produit 10">
+                <p>Masque Nourrissant Visage</p>
+                <h1>12€</h1>
+                <button onclick="addToCart('Masque Nourrissant Visage', 12)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="../images/lmzebab.jpg" alt="Produit 11">
+                <p>Base & Primer Éclat Lumineux</p>
+                <h1>15,22€</h1>
+                <button onclick="addToCart('Base & Primer Éclat Lumineux', 15.22)">Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="../images/ff.avif" alt="Produit 12">
+                <p>Set de Pinceaux Rose Poudré</p>
+                <h1>11,88€</h1>
+                <button onclick="addToCart('Set de Pinceaux Rose Poudré', 11.88)">Ajouter au panier</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Nos services</h3>
+                <ul>
+                    <li>Nouveaux produits</li>
+                    <li>Promotions</li>
+                    <li>Cadeaux</li>
+                    <li>Collection</li>
+                    <li>Contactez-nous</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Rester en contact</h3>
+                <p>05-22-34-11-45</p>
+                <p>THE BEAUTY@gmail.com</p>
+                <p>Avenue Hassan II ang. av Rachidi, CASABLANCA</p>
+            </div>
+            <div class="footer-section">
+                <h3>Les horaires</h3>
+                <ul>
+                    <li>✔ Lun 10h-19h</li>
+                    <li>✔ Mar 10h-19h</li>
+                    <li>✔ Mer 10h-19h</li>
+                    <li>✔ Jeu 10h-19h</li>
+                    <li>✔ Ven 10h-14h</li>
+                    <li>✖ Sam fermé</li>
+                    <li>✖ Dim fermé</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Nos réseaux</h3>
+                <ul>
+                    <li><a href="https://facebook.com/TheBeauty" target="_blank"><i class="fab fa-facebook"></i> Facebook/TheBeauty</a></li>
+                    <li><a href="https://instagram.com/TheBeauty" target="_blank"><i class="fab fa-instagram"></i> Instagram/TheBeauty</a></li>
+                    <li><a href="https://twitter.com/TheBeauty" target="_blank"><i class="fab fa-twitter"></i> Twitter/TheBeauty</a></li>
+                    <li><a href="https://github.com/TheBeauty" target="_blank"><i class="fab fa-github"></i> Github/TheBeauty</a></li>
+                    <li><a href="https://youtube.com/TheBeauty" target="_blank"><i class="fab fa-youtube"></i> YouTube/TheBeauty</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+</body>
+</html>

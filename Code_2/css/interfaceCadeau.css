@@ -1,0 +1,431 @@
+/* Styles globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Section arrière-plan */
+.background {
+    position: relative;
+    z-index: 1;
+    background-image: url('../images/back.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Header */
+header {
+     display: flex;
+    flex-direction: column; /* Aligner verticalement les éléments */
+    justify-content: center;
+    align-items: center; /* Centrer tout le contenu */
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+/* Contenu du header */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Assurez-vous que tout le contenu soit bien espacé */
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #333;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Navigation */
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Panier */
+.cart-icon {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+.cart-icon img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon img:hover {
+    transform: scale(1.1);
+}
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff6666;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50%;
+    display: none; /* Cache le compteur quand il est à 0 */
+}
+/* Contenu principal */
+main {
+    padding: 20px;
+}
+
+/* Sections */
+section {
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+/* Section pack */
+.pack {
+    position: absolute;
+    top: 40%;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+
+/* Formulaire dans pack */
+label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+}
+
+select, input[type="color"] {
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#aperçu {
+    margin-top: 2rem;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.animation {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.animation.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Image dans pack */
+.pack-image {
+    flex: 1;
+    margin-bottom: 50px;
+    align-self: center;
+    justify-content: center;
+}
+
+.pack-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Choix de pack */
+.pack-choices {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: 20px;
+}
+
+.pack-choices select {
+    appearance: none;
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.pack-choices select:focus {
+    border-color: #ff6666;
+    box-shadow: 0 0 5px rgba(255, 102, 102, 0.5);
+}
+
+.pack-choices label {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.pack-choices input,
+.pack-choices button {
+    width: 100%;
+}
+
+.pack-choices button {
+    padding: 0.5rem;
+    background-color: #ff6666;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pack-choices button:hover {
+    background-color: #ff4444;
+}
+
+/* Section Contact */
+#contact {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Limiter la largeur pour un meilleur rendu */
+    margin: 40px auto; /* Centrer horizontalement */
+}
+
+
+#contact h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif; /* Police élégante */
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+#contact p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+#contact a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+#contact a:hover {
+    color: #0056b3; /* Couleur de survol */
+    transform: translateY(-2px); /* Légère animation de survol */
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin-top: 40px; /* Espacement du footer */
+}
+footer p {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.5px;
+}
+footer p:hover {
+    color: #ff6666;
+    cursor: pointer;
+    transform: scale(1.05); /* Animation légère */
+}
+#AjouterauPanier {
+    padding: 0.7rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet brillant quand une sélection est faite */
+#AjouterauPanier.active {
+    background-color: #ff6666;
+    box-shadow: 0 0 15px 2px rgba(255, 102, 102, 0.7);
+    transform: scale(1.05);
+}
+
+/* Option de transition pour un effet visuel */
+#AjouterauPanier:hover {
+    background-color: #555;
+}
+
+/* Lors du clic du bouton, l'effet de lueur devient plus prononcé */
+#AjouterauPanier:focus {
+    outline: none;
+    box-shadow: 0 0 20px 2px rgba(255, 102, 102, 0.9);
+}
+/* Section Demande Personnalisée */
+/* Section Demande Personnalisée */
+#demande-personnalisee {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#btn-plus {
+    font-size: 2rem;
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+#btn-plus:hover {
+    background-color: #ff4444;
+}
+
+.demande-champ-cache {
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#demande-champ label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#demande-champ input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#submit-demande {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#submit-demande:hover {
+    background-color: #0056b3;
+}
+
+/* Animation d'apparition */
+.demande-champ {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.demande-champ.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.demande-champ-cache.active {
+    display: block;
+}

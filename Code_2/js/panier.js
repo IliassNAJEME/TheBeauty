@@ -19,6 +19,7 @@ function displayCartItems() {
             cartItem.innerHTML = `
                 <span>${item.name} (x${item.quantity})</span>
                 <span>${item.price * item.quantity} €</span>
+                <button onclick="removeFromCart('${item.name}')"></button>
             `;
             cartItemsElement.appendChild(cartItem);
 

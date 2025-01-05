@@ -60,70 +60,92 @@ window.addEventListener('error', function(e) {
     mainContent.style.display = 'flex';
 });
 
-// Initialiser tout lorsque la page est chargée
-document.addEventListener('DOMContentLoaded', () => {
-    startLoading();
-    initSmoothScroll();
-});
+// Fonction pour initialiser le panier
+function initCart() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    updateCartCount(cart.length);
+    displayCartItems(cart);
+}
 
-// Fonctionnalités du panier
-document.addEventListener('DOMContentLoaded', function() {
-    let cartCount = 0;
+// Fonction pour ajouter un produit au panier
+window.addToCart = function(productName, price) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // Vérifier si le produit existe déjà dans le panier
+    let productIndex = cart.findIndex(item => item.name === productName);
+    if (productIndex !== -1) {
+        // Si le produit existe, augmenter la quantité
+        cart[productIndex].quantity += 1;
+    } else {
+        // Sinon, ajouter le produit au panier
+        cart.push({ name: productName, price: price, quantity: 1 });
+    }
+
+    // Mettre à jour le localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Mettre à jour l'affichage du panier
+    updateCartCount(cart.length);
+    displayCartItems(cart);
+}
+
+// Fonction pour mettre à jour le nombre d'articles dans le panier
+function updateCartCount(count) {
     const cartCountElement = document.querySelector('.cart-count');
-    
-    // Fonction pour ajouter un produit au panier
-    window.addToCart = function(productName, price) {
-        cartCount++;
-        cartCountElement.textContent = cartCount;
-        
-        // Retirer le message "panier vide"
-        const emptyCart = document.querySelector('.empty-cart');
-        if (emptyCart) {
-            emptyCart.remove();
+    if (cartCountElement) {
+        cartCountElement.textContent = count;
+    }
+}
+
+// Fonction pour afficher les articles du panier dans le dropdown
+function displayCartItems(cart) {
+    const cartItemsElement = document.querySelector('.cart-items');
+    if (cartItemsElement) {
+        cartItemsElement.innerHTML = '';
+
+        if (cart.length === 0) {
+            cartItemsElement.innerHTML = '<div class="empty-cart">Votre panier est vide</div>';
+        } else {
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <span>${item.name} (x${item.quantity})</span>
+                    <span>${item.price} €</span>
+                    <button onclick="removeFromCart('${item.name}')">×</button>
+                `;
+                cartItemsElement.appendChild(cartItem);
+            });
+
+            // Mettre à jour le total du panier
+            updateCartTotal(cart);
         }
-        
-        // Créer l'élément du produit
-        const cartItems = document.querySelector('.cart-items');
-        const cartItem = document.createElement('div');
-        cartItem.className = 'cart-item';
-        cartItem.innerHTML = `
-            <span>${productName}</span>
-            <span>${price} €</span>
-            <button onclick="removeFromCart(this)">×</button>
-        `;
-        
-        cartItems.appendChild(cartItem);
-        updateCartTotal();
     }
+}
+
+// Fonction pour supprimer un produit du panier
+window.removeFromCart = function(productName) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
     
-    // Fonction pour supprimer un produit du panier
-    window.removeFromCart = function(button) {
-        button.parentElement.remove();
-        cartCount--;
-        cartCountElement.textContent = cartCount;
-        
-        if (cartCount === 0) {
-            const cartItems = document.querySelector('.cart-items');
-            cartItems.innerHTML = '<div class="empty-cart">Votre panier est vide</div>';
-        }
-        
-        updateCartTotal();
+    // Filtrer le panier pour retirer le produit
+    cart = cart.filter(item => item.name !== productName);
+
+    // Mettre à jour le localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Mettre à jour l'affichage du panier
+    updateCartCount(cart.length);
+    displayCartItems(cart);
+}
+
+// Fonction pour mettre à jour le total du panier
+function updateCartTotal(cart) {
+    const cartTotalElement = document.querySelector('.cart-total span:last-child');
+    if (cartTotalElement) {
+        let total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        cartTotalElement.textContent = total.toFixed(2) + ' €';
     }
-    
-    // Fonction pour mettre à jour le total du panier
-    function updateCartTotal() {
-        const items = document.querySelectorAll('.cart-item');
-        let total = 0;
-        
-        items.forEach(item => {
-            const priceText = item.querySelector('span:nth-child(2)').textContent;
-            const price = parseFloat(priceText);
-            total += price;
-        });
-        
-        document.querySelector('.cart-total span:last-child').textContent = total.toFixed(2) + ' €';
-    }
-});
+}
 
 // Fonction pour le carrousel
 function initCarrousel() {
@@ -153,5 +175,10 @@ function initCarrousel() {
     setInterval(nextSlide, 5000); // Change de slide toutes les 5 secondes
 }
 
-// Initialiser le carrousel au chargement de la page
-document.addEventListener('DOMContentLoaded', initCarrousel);
+// Initialiser tout lorsque la page est chargée
+document.addEventListener('DOMContentLoaded', () => {
+    startLoading();
+    initSmoothScroll();
+    initCart();
+    initCarrousel();
+});

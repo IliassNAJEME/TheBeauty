@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Beauty</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- Ajout de Font Awesome pour l'icône du panier -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header avec recherche et panier -->
+    <header class="main-header">
+        <div class="header-top">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <img src="../images/logo.jpeg" alt="Logo The Beauty">
+                </div>
+                
+                <!-- Barre de recherche -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un produit...">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <!-- Panier -->
+                <div class="shopping-cart">
+                    <button class="cart-button">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <!-- Dropdown du panier -->
+                    <div class="cart-dropdown">
+                        <div class="cart-items">
+                            <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+                            <div class="empty-cart">Votre panier est vide</div>
+                        </div>
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span>0.00 €</span>
+                        </div>
+                        <a href="./panier.html" class="voir-panier-btn">Voir le panier</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="nouveaux_produits.html" class="nav-link">Nouveau Produits</a></li>
+                <li><a href="promotion.html" class="nav-link">Promotion</a></li>
+                <li><a href="gifts.html" class="nav-link">Gifts</a></li>
+                <li><a href="collection.html" class="nav-link">Collection</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Le reste de votre code HTML reste identique -->
+
+    <!-- Section de chargement -->
+    <div id="loading-container">
+        <div class="loading-content">
+            <img src="../images/logo.jpeg" alt="Logo The Beauty" class="loading-logo">
+            <p id="loading-text">Chargement... 0%</p>
+        </div>
+    </div>
+
+    <div class="carrousel-section">
+        <button class="carrousel-nav prev">&#10094;</button>
+        <div class="carrousel-container">
+            <div class="carrousel-slide">
+                <img src="../images/interface_1.jpg" alt="Promotion 1">
+            </div>
+            <div class="carrousel-slide">
+                <img src="../images/interface_5.jpg" alt="Promotion 2">
+            </div>
+            <div class="carrousel-slide">
+                <img src="../images/interface_3.jpg" alt="Promotion 3">
+            </div>
+            <div class="carrousel-slide">
+                <img src="../images/interface_4.jpg" alt="Promotion 4">
+            </div>
+        </div>
+        <button class="carrousel-nav next">&#10095;</button>
+    </div>
+
+    
+
+    <!-- Nouvelle section pour les nouveaux produits -->
+    <div class="nouveaux-produits">
+        <h2>Nouveaux Produits</h2>
+        <div class="products-container">
+            <div class="product">
+                <img src="../images/pic1.png" alt="Produit 1">
+                <h3>fond de teint</h3>
+                <p>Riche d'ingrédients naturels, elle laisse votre peau douce, radieuse et revitalisée. Parfaite pour une utilisation quotidienne, elle convient à tous les types de peau</p>
+                <a href="./Nouveau.html" class="button">Voir plus</a>
+            </div>
+            <div class="product">
+                <img src="../images/pic2.png" alt="Produit 2">
+                <h3>Eye Makeup Palette</h3>
+                <p>Inspirée par un style de vie urbain et moderne, Eye Makeup Palette propose des produits cosmétiques à la fois performants et respectueux de la peau.</p>
+                <a href="./Nouveau.html" class="button">Voir plus</a>
+            </div>
+            <div class="product">
+                <img src="../images/pic9.png" alt="Produit 3">
+                <h3>Touchland</h3>
+                <p>Découvrez Touchland, un parfum qui incarne l'élégance et la sensualité. Conçu pour ceux et celles qui osent se démarquer, ce flacon renferme une composition olfactive exceptionnelle, alliant des notes riches et harmonieuses</p>
+                <a href="./Nouveau.html" class="button">Voir plus</a>
+            </div>
+            <div class="product">
+                <img src="../images/pic8.png" alt="Produit 4">
+                <h3>Cherry Shine Caring Lip Balm</h3>
+                <p>Découvrez Saie Mini Glowly, l'essence même d'un teint naturellement lumineux et frais. Ce highlighter léger et facile à appliquer apporte une lueur subtile et enveloppante à votre peau, comme un rayon de soleil capturé dans un flacon.</p>
+                <a href="./Nouveau.html" class="button">Voir plus</a>
+            </div>
+            <div class="product">
+                <img src="../images/pic6.png" alt="Produit 5">
+                <h3>PATRICK TA</h3>
+                <p>le Double-Take Crème & Powder Blush Duo de PATRICK TA. Ce duo innovant combine une texture crème ultra-fondante et une poudre veloutée pour un résultat parfaitement équilibré. </p>
+                <a href="./Nouveau.html" class="button">Voir plus</a>
+            </div>
+            <!-- Flèche pour naviguer vers une autre page -->
+            <div class="arrow">
+                <a href="./Nouveau.html">&#8594;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section pour les promotions -->
+    <div class="promotions">
+        <h2>Promotions</h2>
+        <div class="products-container">
+            <div class="product">
+                <div class="promotion-badge">-30%</div>
+                <img src="../images/Promotion_1.jpg" alt="Promotion 1">
+                <h3>Rouge à lèvres MAC</h3>
+                <p class="price">
+                    <span class="original-price">30€</span>
+                    <span class="discounted-price">21€</span>
+                </p>
+                <p>Rouge à lèvres longue tenue MAC, disponible en plusieurs teintes. Texture crémeuse et confortable.</p>
+                <a href="promotion.html" class="button">Acheter</a>
+            </div>
+            <div class="product">
+                <div class="promotion-badge">-25%</div>
+                <img src="../images/Promotion_2.jpg" alt="Promotion 2">
+                <h3>Palette Fenty Beauty</h3>
+                <p class="price">
+                    <span class="original-price">45€</span>
+                    <span class="discounted-price">33.75€</span>
+                </p>
+                <p>Palette de fards à paupières hautement pigmentés. Collection exclusive avec des teintes métalliques et mates.</p>
+                <a href="promotion.html" class="button">Acheter</a>
+            </div>
+            <div class="product">
+                <div class="promotion-badge">-40%</div>
+                <img src="../images/Promotion_3.jpg" alt="Promotion 3">
+                <h3>Set de Pinceaux</h3>
+                <p class="price">
+                    <span class="original-price">60€</span>
+                    <span class="discounted-price">36€</span>
+                </p>
+                <p>Set complet de pinceaux professionnels pour le maquillage. Poils synthétiques de haute qualité.</p>
+                <a href="promotion.html" class="button">Acheter</a>
+            </div>
+            <div class="arrow">
+                <a href="promotion.html">&#8594;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section pour les Gifts -->
+    <div class="gifts">
+        <h2><span style="font-size: 2rem;">🎁</span> <span class="gradient-text">Gifts</span></h2>
+        <div class="products-container">
+            <div class="product">
+                <img src="../images/Cadeau2.webp" alt="Coffret Soin Visage">
+                <p class="price">49.99€</p>
+                <a href="./interfaceCadeau.html" class="button">Voir plus</a>
+            </div>
+            <div class="product">
+                <img src="../images/Cadeau2-blue.webp" alt="Collection Maquillage">
+                <p class="price">79.99€</p>
+                <a href="./interfaceCadeau.html" class="button">Voir plus</a>
+            </div>
+            <div class="product">
+                <img src="../images/Cadeau2-noir.webp" alt="Coffret Parfum Deluxe">
+                <p class="price">89.99€</p>
+                <a href="./interfaceCadeau.html" class="button">Voir plus</a>
+            </div>
+            <div class="product">
+                <img src="../images/Cadeau2-rouge.webp" alt="Box Découverte">
+                <p class="price">39.99€</p>
+                <a href="./interfaceCadeau.html" class="button">Voir plus</a>
+            </div>
+            <div class="arrow">
+                <a href="./interfaceCadeau.html">&#8594;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section pour la Collection -->
+    <div class="collection">
+        <h2><span class="gradient-text">Collection</span></h2>
+        <div class="products-container">
+            <div class="product">
+                <img src="../images/collection_1.jpeg" alt="Collection Printemps">
+                <h3>Collection Printemps</h3>
+                <p class="price">129.99€</p>
+                <p>Découvrez notre collection printanière exclusive, mettant en vedette des tons pastel et des formules légères pour un look frais et naturel.</p>
+                <a href="./collection.html" class="button">Explorer</a>
+            </div>
+            <div class="product">
+                <img src="../images/collection_2.jpeg" alt="Collection Été">
+                <h3>Collection Été</h3>
+                <p class="price">149.99€</p>
+                <p>Une collection estivale résistante à l'eau et à la chaleur, parfaite pour les journées ensoleillées et les soirées d'été.</p>
+                <a href="./collection.html" class="button">Explorer</a>
+            </div>
+            <div class="product">
+                <img src="../images/collection_3.jpeg" alt="Collection Automne">
+                <h3>Collection Automne</h3>
+                <p class="price">139.99€</p>
+                <p>Des teintes chaudes et riches inspirées des couleurs automnales, avec des formules hydratantes pour protéger votre peau.</p>
+                <a href="./collection.html" class="button">Explorer</a>
+            </div>
+            <div class="product">
+                <img src="../images/collection_4.jpeg" alt="Collection Hiver">
+                <h3>Collection Hiver</h3>
+                <p class="price">159.99€</p>
+                <p>Une collection somptueuse aux tons profonds et métalliques, enrichie en ingrédients nourrissants pour l'hiver.</p>
+                <a href="./collection.html" class="button">Explorer</a>
+            </div>
+            <div class="arrow">
+                <a href="./collection.html">&#8594;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+<footer class="main-footer">
+    <!-- Section des mises à jour -->
+    <div class="updates-section">
+        <div class="update-box">
+            <h3>Inscrivez-vous aux SMS The Beauty</h3>
+            <p>Recevez les dernières offres et nouveautés</p>
+            <button class="signup-btn">S'inscrire maintenant</button>
+        </div>
+        <div class="update-box">
+            <h3>Newsletter The Beauty</h3>
+            <p>Ne manquez aucune de nos promotions</p>
+            <button class="signup-btn">S'abonner</button>
+        </div>
+        <div class="update-box">
+            <h3>Trouvez un magasin</h3>
+            <p>Choisissez votre boutique</p>
+            <button class="store-btn">Localiser</button>
+        </div>
+    </div>
+
+    <!-- Section des services principaux -->
+    <div class="services-section">
+        <div class="service-item">
+            <h3>Application The Beauty</h3>
+            <button class="download-btn">Télécharger</button>
+        </div>
+        <div class="service-item">
+            <h3>Alertes SMS The Beauty</h3>
+            <button class="signup-btn">S'inscrire</button>
+        </div>
+        <div class="service-item">
+            <h3>Carte The Beauty</h3>
+            <p>-25% sur votre premier achat</p>
+            <a href="#" class="details-link">DÉTAILS</a>
+        </div>
+    </div>
+
+    <!-- Liens du footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Nos services</h3>
+                <ul>
+                    <li>Nouveaux produits</li>
+                    <li>Promotions</li>
+                    <li>Gifts</li>
+                    <li>Collection</li>
+                    <li>contact us</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Rester en contact</h3>
+                <p>05-22-34-11-45</p>
+                <p>THE BEAUTY@gmail.com</p>
+                <p> Avenue Hassan II ang. av Rachidi, CASABLANCA</p>
+            </div>
+            <div class="footer-section">
+                <h3>Les horaires</h3>
+                <ul>
+                    <li>✔ Lun 10h-19h</li>
+                    <li>✔ Mar 10h-19h</li>
+                    <li>✔ Mer 10h-19h</li>
+                    <li>✔ Jeu 10h-19h</li>
+                    <li>✔ Ven 10h-14h</li>
+                    <li>✖ Sam fermé</li>
+                    <li>✖ Dim fermé</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Nos réseaux</h3>
+                <ul>
+                    <li><a href="https://facebook.com/TheBeauty" target="_blank"><i class="fab fa-facebook"></i> Facebook/TheBeauty</a></li>
+                    <li><a href="https://instagram.com/TheBeauty" target="_blank"><i class="fab fa-instagram"></i> Instagram/TheBeauty</a></li>
+                    <li><a href="https://twitter.com/TheBeauty" target="_blank"><i class="fab fa-twitter"></i> Twitter/TheBeauty</a></li>
+                    <li><a href="https://github.com/TheBeauty" target="_blank"><i class="fab fa-github"></i> Github/TheBeauty</a></li>
+                    <li><a href="https://youtube.com/TheBeauty" target="_blank"><i class="fab fa-youtube"></i> YouTube/TheBeauty</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

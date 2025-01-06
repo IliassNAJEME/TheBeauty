@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions - The Beauty</title>
+    <link rel="stylesheet" href="../css/promotion.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <img src="../images/logo.jpeg" alt="Logo The Beauty">
+                </div>
+                
+                <!-- Barre de recherche -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un produit...">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <!-- Panier -->
+                <div class="shopping-cart">
+                    <button class="cart-button">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <!-- Dropdown du panier -->
+                    <div class="cart-dropdown">
+                        <div class="cart-items">
+                            <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+                            <div class="empty-cart">Votre panier est vide</div>
+                        </div>
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span>0.00 €</span>
+                        </div>
+                        <button class="checkout-button">Voir le panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="nouveaux_produits.html" class="nav-link">Nouveau Produits</a></li>
+                <li><a href="promotion.html" class="nav-link">Promotion</a></li>
+                <li><a href="gifts.html" class="nav-link">Gifts</a></li>
+                <li><a href="collection.html" class="nav-link">Collection</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <!-- Conteneur de chargement -->
+    <div id="loading-container">
+        <div class="loading-content">
+            <div class="loading-logo"></div>
+            <p id="loading-text">Chargement...</p>
+        </div>
+    </div>
+
+    <!-- Section principale -->
+    <div class="background">
+        <!-- Section du logo -->
+        <div class="logo-section">
+            <img src="../images/logo.jpeg" alt="Logo The Beauty">
+        </div>
+
+        <!-- Section du contenu -->
+        <div class="content">
+            <h1 class="title">Promotions Exclusives</h1>
+            <p class="subtitle">Découvrez les meilleures offres et réductions sur vos produits préférés.</p>
+
+            <!-- Section des promotions -->
+            <div class="nouveaux-produits">
+                <h2>Nos Offres</h2>
+                <div class="products-container">
+                    <!-- Produit 1 -->
+                    <div class="product">
+                        <img src="../images/cremehyd.webp" alt="Crème Hydratante">
+                        <h3>Crème Hydratante</h3>
+                        <p>25€ (-30% aujourd'hui seulement)</p>
+                        <button onclick="addToCart('Crème Hydratante', 25.00)">Acheter maintenant</button>
+                    </div>
+                    <!-- Produit 2 -->
+                    <div class="product">
+                        <img src="../images/pall.webp" alt="Palette Maquillage">
+                        <h3>Palette Maquillage</h3>
+                        <p>45€ (-40% pour les fêtes)</p>
+                        <button onclick="addToCart('Palette Maquillage', 45.00)">Acheter maintenant</button>
+                    </div>
+                    <!-- Produit 3 -->
+                    <div class="product">
+                        <img src="../images/oil.webp" alt="Huile de Beauté">
+                        <h3>Huile de Beauté</h3>
+                        <p>30€ (Offre spéciale : 2 pour le prix d'1)</p>
+                        <button onclick="addToCart('Huile de Beauté', 30.00)">Acheter maintenant</button>
+                    </div>
+                    <!-- Produit 4 -->
+                    <div class="product">
+                        <img src="../images/Sérum Anti-Âge.webp" alt="Sérum Anti-Âge">
+                        <h3>Sérum Anti-Âge</h3>
+                        <p>50€ (-25% ce mois-ci)</p>
+                        <button onclick="addToCart('Sérum Anti-Âge', 50.00)">Acheter maintenant</button>
+                    </div>
+                    <!-- Produit 5 -->
+                    <div class="product">
+                        <img src="../images/lipstick.webp" alt="Rouge à Lèvres">
+                        <h3>Rouge à Lèvres</h3>
+                        <p>20€ (-15% sur la gamme premium)</p>
+                        <button onclick="addToCart('Rouge à Lèvres', 20.00)">Acheter maintenant</button>
+                    </div>
+                    <!-- Produit 6 -->
+                    <div class="product">
+                        <img src="../images/mask.webp" alt="Masque Visage">
+                        <h3>Masque Visage</h3>
+                        <p>15% (Offre 1 acheté = 1 offert)</p>
+                        <button onclick="addToCart('Masque Visage', 15.00)">Acheter maintenant</button>
+                    </div>
+                    <!-- Produit 7 -->
+                    <div class="product">
+                        <img src="../images/fondation.webp" alt="Fond de Teint">
+                        <h3>Fond de Teint</h3>
+                        <p>35€ (-20% pour les premières commandes)</p>
+                        <button onclick="addToCart('Fond de Teint', 35.00)">Acheter maintenant</button>
+                    </div>
+                    <!-- Produit 8 -->
+                    <div class="product">
+                        <img src="../images/toner.webp" alt="Lotion Tonique">
+                        <h3>Lotion Tonique</h3>
+                        <p>18€ (Promotion spéciale : -10%)</p>
+                        <button onclick="addToCart('Lotion Tonique', 18.00)">Acheter maintenant</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flèche pour revenir en haut -->
+            <div class="arrow">
+                <a href="#top">↑ Retour en haut</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Nos services</h3>
+                <ul>
+                    <li>Nouveaux produits</li>
+                    <li>Promotions</li>
+                    <li>Gifts</li>
+                    <li>Collection</li>
+                    <li>contact us</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Rester en contact</h3>
+                <p>05-22-34-11-45</p>
+                <p>THE BEAUTY@gmail.com</p>
+                <p> Avenue Hassan II ang. av Rachidi, CASABLANCA</p>
+            </div>
+            <div class="footer-section">
+                <h3>Les horaires</h3>
+                <ul>
+                    <li>✔ Lun 10h-19h</li>
+                    <li>✔ Mar 10h-19h</li>
+                    <li>✔ Mer 10h-19h</li>
+                    <li>✔ Jeu 10h-19h</li>
+                    <li>✔ Ven 10h-14h</li>
+                    <li>✖ Sam fermé</li>
+                    <li>✖ Dim fermé</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Nos réseaux</h3>
+                <ul>
+                    <li><a href="https://facebook.com/TheBeauty" target="_blank"><i class="fab fa-facebook"></i> Facebook/TheBeauty</a></li>
+                    <li><a href="https://instagram.com/TheBeauty" target="_blank"><i class="fab fa-instagram"></i> Instagram/TheBeauty</a></li>
+                    <li><a href="https://twitter.com/TheBeauty" target="_blank"><i class="fab fa-twitter"></i> Twitter/TheBeauty</a></li>
+                    <li><a href="https://github.com/TheBeauty" target="_blank"><i class="fab fa-github"></i> Github/TheBeauty</a></li>
+                    <li><a href="https://youtube.com/TheBeauty" target="_blank"><i class="fab fa-youtube"></i> YouTube/TheBeauty</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
